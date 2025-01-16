@@ -1,14 +1,28 @@
-import Container from '@/components/Container';
-import PageTitle from '@/components/reusable/PageTitle'
-import Image from 'next/image';
-import React from 'react'
+"use client"
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import Container from "@/components/Container";
+import PageTitle from "@/components/reusable/PageTitle";
+import Image from "next/image";
+import React from "react";
 
 const AboutPage = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true, 
+    threshold: 0.1, 
+  });
 
   return (
-    <section
+    <motion.section
+      ref={ref}
+      initial={{ opacity: 0, y: 100 }} // Start from below with 0 opacity
+      animate={{
+        opacity: inView ? 1 : 0, // Fade in
+        y: inView ? 0 : 100, // Slide up to the original position
+        transition: { duration: 1 }, // Adjust duration for smoothness
+      }}
       id="about"
-      className=" py-28"
+      className="py-28"
     >
       <Container>
         <PageTitle smallTitle={"about"} mainTitle={"Who I am?"} />
@@ -17,9 +31,14 @@ const AboutPage = () => {
             <div className="space-y-4 order-2 lg:order-1 dark:text-Darksecondary-paragraph text-[1.1rem]">
               <p>
                 Hi, I'm Zin Wai Aung, a passionate{" "}
-                <strong className=" dark:text-Darksecondary">Web Developer</strong>{" "}
+                <strong className=" dark:text-Darksecondary">
+                  Web Developer
+                </strong>{" "}
                 and freelance{" "}
-                <strong className=" dark:text-Darksecondary">Logo Designer</strong>.
+                <strong className=" dark:text-Darksecondary">
+                  Logo Designer
+                </strong>
+                .
                 <br />I combine creative design with technical expertise to
                 deliver stunning, user-friendly websites and memorable brand
                 identities.
@@ -76,8 +95,8 @@ const AboutPage = () => {
           </div>
         </main>
       </Container>
-    </section>
+    </motion.section>
   );
-}
+};
 
-export default AboutPage
+export default AboutPage;

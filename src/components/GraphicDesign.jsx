@@ -1,8 +1,17 @@
+"use client";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import React from "react";
 import Image from "next/image";
 import ListUI from "./reusable/ListUI";
 
 const GraphicDesign = () => {
+
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
   const graphicInfo = {
     title: "Graphic  Design",
     details: [
@@ -32,7 +41,16 @@ const GraphicDesign = () => {
   };
 
   return (
-    <section className="flex flex-col lg:flex-row justify-between items-center gap-x-5">
+    <motion.section
+      ref={ref}
+      initial={{ opacity: 0, y: 100 }} // Start from below with 0 opacity
+      animate={{
+        opacity: inView ? 1 : 0, // Fade in
+        y: inView ? 0 : 100, // Slide up to the original position
+        transition: { duration: 1 }, // Adjust duration for smoothness
+      }}
+      className="flex flex-col lg:flex-row justify-between items-center gap-x-5"
+    >
       <div className=" lg:w-1/2">
         <Image
           src={"/svg/animation/designer.svg"}
@@ -66,7 +84,7 @@ const GraphicDesign = () => {
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

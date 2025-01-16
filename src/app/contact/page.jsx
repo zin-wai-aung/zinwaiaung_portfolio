@@ -1,3 +1,6 @@
+"use client";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import Container from "@/components/Container";
 import PageTitle from "@/components/reusable/PageTitle";
 import { SocialIcons } from "@/components/reusable/SocialIcons";
@@ -5,9 +8,23 @@ import React from "react";
 import { FaEnvelope } from "react-icons/fa";
 
 const ContactPage = () => {
- 
+
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
   return (
-    <section id="contact" className="py-28">
+    <motion.section
+      ref={ref}
+      initial={{ opacity: 0, y: 100 }} // Start from below with 0 opacity
+      animate={{
+        opacity: inView ? 1 : 0, // Fade in
+        y: inView ? 0 : 100, // Slide up to the original position
+        transition: { duration: 1 }, // Adjust duration for smoothness
+      }}
+      id="contact"
+      className="py-28"
+    >
       <Container>
         <PageTitle smallTitle={"contact"} mainTitle={"Get In Touch"} />
         <main className=" flex flex-col justify-center mt-20">
@@ -48,7 +65,7 @@ const ContactPage = () => {
           </div>
         </main>
       </Container>
-    </section>
+    </motion.section>
   );
 };
 

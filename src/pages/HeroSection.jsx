@@ -3,12 +3,40 @@ import React from "react";
 import Container from "../components/Container";
 import Typewriter from "typewriter-effect";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer"; // To detect when the section is in view
 
 const HeroSection = () => {
+
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
   return (
-    <section className="flex justify-center items-center min-h-[90vh]">
+    <motion.section
+      ref={ref}
+      initial={{ opacity: 0, y: 100 }} // Start from below with 0 opacity
+      animate={{
+        opacity: inView ? 1 : 0, // Fade in
+        y: inView ? 0 : 100, // Slide up to the original position
+        transition: { duration: 1 }, // Adjust duration for smoothness
+      }}
+      className="flex justify-center items-center min-h-[90vh]"
+    >
       <Container>
-        <main className=" mt-20 flex flex-col lg:flex-row justify-between lg:items-center gap-y-10 lg:gap-y-0 gap-x-0 lg:gap-x-20">
+        <motion.main
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: { staggerChildren: 0.25 }, // Stagger items' animations
+            },
+          }}
+          className=" mt-20 flex flex-col lg:flex-row justify-between lg:items-center gap-y-10 lg:gap-y-0 gap-x-0 lg:gap-x-20"
+        >
           {/* Info side */}
           <div className=" w-full lg:w-3/5 flex flex-col gap-y-3 lg:gap-y-5 order-2 lg:order-1">
             <p className=" text-primary font-grotesk font-bold text-xl">
@@ -50,9 +78,9 @@ const HeroSection = () => {
               height={300}
             />{" "}
           </div>
-        </main>
+        </motion.main>
       </Container>
-    </section>
+    </motion.section>
   );
 };
 

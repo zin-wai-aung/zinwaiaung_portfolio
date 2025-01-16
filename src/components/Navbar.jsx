@@ -1,12 +1,13 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { FaMoon, FaTimes, FaBars } from "react-icons/fa";
-import { useTheme } from "@nextui-org/use-theme";
 import { LucideSunMedium } from "lucide-react";
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { useTheme } from "@/hooks/useTheme";
 
 const navItems = [
   { href: "/about", label: "About" },
@@ -17,7 +18,7 @@ const navItems = [
 ];
 
 export default function Navbar() {
-  const [theme, setTheme] = useState('dark');
+  const { theme, toggleTheme } = useTheme()
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [prevScrollY, setPrevScrollY] = useState(0);
@@ -43,27 +44,44 @@ export default function Navbar() {
   }, [prevScrollY]);
 
   return (
-    <header
+    <motion.header
+      initial="hidden"
+      animate="visible"
+      variants={{
+        hidden: { opacity: 0 },
+        visible: {
+          opacity: 1,
+          transition: { staggerChildren: 0.25 }, // Stagger items' animations
+        },
+      }}
       className={`fixed backdrop-blur-md w-full z-50 dark:bg-primary-Nav/60 shadow-sm transform transition-transform duration-500 ${
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <nav className="">
+      <nav>
         <div className="flex justify-between items-center py-4 px-20">
           {/* Logo */}
           <Link href="/" className="text-xl font-bold">
-            <Image
-              src={"/logo.png"}
-              alt="logo"
-              width={70}
-              height={100}
-            />
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, y: 10 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+              }}
+            >
+              <Image src={"/logo.png"} alt="logo" width={70} height={100} />
+            </motion.div>
           </Link>
 
           {/* Navigation Links */}
           <ul className={`hidden md:flex items-center space-x-10`}>
             {navItems.map((item) => (
-              <li key={item.href}>
+              <motion.li
+                variants={{
+                  hidden: { opacity: 0, y: 10 },
+                  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+                }}
+                key={item.href}
+              >
                 <Link
                   href={item.href}
                   className={cn(
@@ -73,30 +91,40 @@ export default function Navbar() {
                 >
                   {item.label}
                 </Link>
-              </li>
+              </motion.li>
             ))}
             {/* Resume Button */}
-            <li>
+            <motion.li
+              variants={{
+                hidden: { opacity: 0, y: 10 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+              }}
+            >
               <button className="border-[1.5px] border-primary text-primary px-3 py-2 rounded-md hover:bg-primary/10">
                 Resume
               </button>
-            </li>
+            </motion.li>
             {/* Dark Mode Toggle */}
-            <li>
+            <motion.li
+              variants={{
+                hidden: { opacity: 0, y: 10 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+              }}
+            >
               <button>
                 {theme === "dark" ? (
                   <LucideSunMedium
-                    onClick={() => setTheme("light")}
+                    onClick={() => toggleTheme("light")}
                     className="text-primary"
                   />
                 ) : (
                   <FaMoon
-                    onClick={() => setTheme("dark")}
+                    onClick={() => toggleTheme("dark")}
                     className="text-primary"
                   />
                 )}
               </button>
-            </li>
+            </motion.li>
           </ul>
 
           {/* Mobile Menu Toggle Button */}
@@ -133,12 +161,12 @@ export default function Navbar() {
               <button>
                 {theme === "dark" ? (
                   <LucideSunMedium
-                    onClick={() => setTheme("light")}
+                    onClick={() => toggleTheme("light")}
                     className=" text-Lightsecondary dark:text-primary"
                   />
                 ) : (
                   <FaMoon
-                    onClick={() => setTheme("dark")}
+                    onClick={() => toggleTheme("dark")}
                     className=" text-Lightsecondary dark:text-primary"
                   />
                 )}
@@ -147,6 +175,6 @@ export default function Navbar() {
           </ul>
         )}
       </nav>
-    </header>
+    </motion.header>
   );
 }
