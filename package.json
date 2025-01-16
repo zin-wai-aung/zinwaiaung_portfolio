@@ -5,9 +5,10 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build && next export",
-      "postbuild": "next-on-netlify",
+    "postbuild": "next-on-netlify",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall": "rm -rf node_modules/@next/swc-*"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
