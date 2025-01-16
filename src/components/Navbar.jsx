@@ -17,7 +17,7 @@ const navItems = [
 ];
 
 export default function Navbar() {
-  const { theme, setTheme } = useTheme();
+  const [theme, setTheme] = useState('dark');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [prevScrollY, setPrevScrollY] = useState(0);
