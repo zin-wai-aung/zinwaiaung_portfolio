@@ -1,11 +1,11 @@
-import Container from '@/components/Container';
-import PageTitle from '@/components/reusable/PageTitle';
-import {SocialIcons} from '@/components/reusable/SocialIcons';
-import React from 'react'
-import { FaEnvelope } from 'react-icons/fa';
+import Container from "@/components/Container";
+import PageTitle from "@/components/reusable/PageTitle";
+import { SocialIcons } from "@/components/reusable/SocialIcons";
+import React from "react";
+import { FaEnvelope } from "react-icons/fa";
 
 const ContactPage = () => {
-  
+ 
   return (
     <section id="contact" className="py-28">
       <Container>
@@ -30,7 +30,10 @@ const ContactPage = () => {
           <div className=" flex justify-center items-center gap-x-2">
             <FaEnvelope className=" text-xl" />
 
-            <a href="mailto:zinwaiaung156@gmail.com" className=" hover:underline text-xl">
+            <a
+              href="mailto:zinwaiaung156@gmail.com"
+              className=" hover:underline text-xl"
+            >
               zinwaiaung156@gmail.com
             </a>
           </div>
@@ -47,6 +50,6 @@ const ContactPage = () => {
       </Container>
     </section>
   );
-}
+};
 
-export default ContactPage
+export default ContactPage;
