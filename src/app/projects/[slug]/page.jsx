@@ -1,15 +1,22 @@
-"use client"
 import Container from '@/components/Container';
 import Image from 'next/image';
 import React from 'react'
 import portfolioProjects from '../../../../_data/projects';
 import BreadCrumbTab from '@/components/reusable/Breadcrumb';
 import { FaGithub, FaLocationArrow } from "react-icons/fa";
-
 import ContactPage from '@/app/contact/page';
 
+// Function to generate static parameters for this dynamic route
+export async function generateStaticParams() {
+  const allProjects = portfolioProjects.flatMap((category) => category.projects);
+
+  return allProjects.map((project) => ({
+    slug: project.title.toLowerCase().replace(/\s+/g, "-"),
+  }));
+}
+
 const ProjectDetailPage = ({params}) => {
-  const { slug } = React.use(params);
+  const { slug } = params;
 
 const currentProject = portfolioProjects
   .flatMap((category) => category.projects) 
