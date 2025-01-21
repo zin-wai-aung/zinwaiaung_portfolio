@@ -10,18 +10,16 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
-  ...compat.extends("next/core-web-vitals"),
+  ...compat.extends("next/core-web-vitals"), // Import Next.js rules
   {
-    rules: {
-      // Temporarily disable rules to identify the issue
-      "no-unused-vars": "off",
-      "no-console": "off",
-    },
-    parser: "@babel/eslint-parser",
-    parserOptions: {
-      requireConfigFile: false, // For JavaScript
+    files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
+    languageOptions: {
       ecmaVersion: 2021,
       sourceType: "module",
+    },
+    rules: {
+      "no-unused-vars": "warn",
+      "no-console": "warn",
     },
   },
 ];
