@@ -1,7 +1,7 @@
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 import React from "react";
 import ProjectCard from "./ProjectCard";
-import portfolioProjects from "../../_data/projects";
+import portfolioProjects from "../_data/projects";
 
 export default function ProjectTab() {
   return (

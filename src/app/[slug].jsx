@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import projects from "../../_data/projects"; // Adjust relative path as necessary
+import projects from "../_data/projects"; // Adjust relative path as necessary
 import Image from "next/image";
 
 const ProjectDetailPage = () => {

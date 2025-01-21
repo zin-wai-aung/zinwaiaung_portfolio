@@ -1,32 +1,37 @@
-import Container from '@/components/Container';
-import Image from 'next/image';
-import React from 'react'
-import portfolioProjects from '../../../../_data/projects';
-import BreadCrumbTab from '@/components/reusable/Breadcrumb';
+import Container from "@/components/Container";
+import Image from "next/image";
+import React from "react";
+import portfolioProjects from "../../../_data/projects";
+import BreadCrumbTab from "@/components/reusable/Breadcrumb";
 import { FaGithub, FaLocationArrow } from "react-icons/fa";
-import ContactPage from '@/app/contact/page';
+import ContactPage from "@/app/contact/page";
 
 // Function to generate static parameters for this dynamic route
 export async function generateStaticParams() {
-  const allProjects = portfolioProjects.flatMap((category) => category.projects);
+  const allProjects = portfolioProjects.flatMap(
+    (category) => category.projects
+  );
 
   return allProjects.map((project) => ({
     slug: project.title.toLowerCase().replace(/\s+/g, "-"),
   }));
 }
 
-const ProjectDetailPage = ({params}) => {
+const ProjectDetailPage = ({ params }) => {
   const { slug } = params;
 
-const currentProject = portfolioProjects
-  .flatMap((category) => category.projects) 
-  .find((project) => project.title.toLowerCase().replace(/\s+/g, "-") === slug);
+  const currentProject = portfolioProjects
+    .flatMap((category) => category.projects)
+    .find(
+      (project) => project.title.toLowerCase().replace(/\s+/g, "-") === slug
+    );
 
-if (!currentProject) {
-  return <p>Project not found</p>;
+  if (!currentProject) {
+    return <p>Project not found</p>;
   }
-  const { title, description, tools, image, detailImages, codeLink, demoLink } = currentProject;
-    
+  const { title, description, tools, image, detailImages, codeLink, demoLink } =
+    currentProject;
+
   return (
     <section id="projects" className=" pt-28">
       {/* Detail Header Section */}
@@ -126,6 +131,6 @@ if (!currentProject) {
       </Container>
     </section>
   );
-}
+};
 
-export default ProjectDetailPage
+export default ProjectDetailPage;
