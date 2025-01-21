@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import ListUI from "./reusable/ListUI";
 
+
 const WebDevelopment = () => {
   const webInfo = {
     title: "Web Development",
@@ -45,7 +46,10 @@ const WebDevelopment = () => {
   };
 
   return (
-    <section className=" flex flex-col lg:flex-row justify-between items-center gap-x-5">
+    <section
+      
+      className=" flex flex-col lg:flex-row justify-between items-center gap-x-5"
+    >
       <div className=" lg:w-1/2 flex justify-start items-center">
         <Image
           src={"/svg/animation/developer.svg"}
@@ -65,7 +69,10 @@ const WebDevelopment = () => {
         </ul>
         <div className=" flex flex-row items-center flex-wrap gap-3 lg:gap-5 mt-5">
           {webInfo.logoIcons.map((item) => (
-            <div key={item.title} className=" w-14 h-14 rounded-lg bg-Darksecondary/30 p-2 flex justify-center items-center">
+            <div
+              key={item.title}
+              className=" w-14 h-14 rounded-lg bg-Darksecondary/30 p-2 flex justify-center items-center"
+            >
               <Image
                 src={item.iconUrl}
                 alt={item.title}
