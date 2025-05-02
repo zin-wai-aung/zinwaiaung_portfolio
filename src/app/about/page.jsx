@@ -87,7 +87,7 @@ const AboutPage = () => {
           </div>
           <div className=" w-full lg:w-1/3 flex justify-center order-1 lg:order-2 mt-10 md:mt-0">
             <Image
-              src={"/images/Profile.png"}
+              src="https://res.cloudinary.com/da7vqcwkp/image/upload/profile_pmxxyt.png"
               alt="profile photo"
               width={300}
               height={300}

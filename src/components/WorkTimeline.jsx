@@ -5,7 +5,6 @@ import {  Timeline } from "flowbite-react";
 import { HiCalendar } from "react-icons/hi";
 import { TbArrowUpRight } from "react-icons/tb";
 import ListUI from './reusable/ListUI';
-import Image from 'next/image';
 
 const WorkTimelineUI = () => {
   return (

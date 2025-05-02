@@ -18,7 +18,7 @@ const ProjectCard = ({
   return (
     <div
       className={`relative w-full ${
-        codeLink ? "h-[28.5rem]" : "h-[25rem]"
+        tools ? "h-[30rem]" : "h-[25rem]"
       } group mx-auto rounded-xl shadow-lg overflow-hidden bg-Lightsecondary/20 dark:bg-Darksecondary-muted/20`}
     >
       {/* card image */}
@@ -30,7 +30,7 @@ const ProjectCard = ({
               alt={title}
               width={400}
               height={100}
-              className="w-full h-[18rem] bg-purple-500 object-cover transition-transform duration-300 hover:scale-105"
+              className="w-full h-[18rem] object-cover transition-transform duration-300 hover:scale-105"
             />
           </Link>
         ) : (
@@ -84,18 +84,16 @@ const ProjectCard = ({
         )}
 
         {/* technology */}
-        {codeLink && (
           <div className=" absolute top-[24rem] flex flex-wrap gap-1">
             {tools?.map((tool, index) => (
               <span
                 key={index}
-                className="px-2 py-1 text-[.8rem] font-medium text-gray-800 bg-Lightsecondary/30 rounded-full dark:bg-Darksecondary/20 dark:text-Darksecondary-paragraph"
+                className="px-2 py-[.1rem] overflow-x-scroll text-[.8rem] font-medium text-gray-800 bg-Lightsecondary/30 rounded-full dark:bg-Darksecondary/20 dark:text-Darksecondary-paragraph"
               >
                 {tool}
               </span>
             ))}
           </div>
-        )}
       </div>
     </div>
   );

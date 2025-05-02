@@ -101,7 +101,7 @@ const EducationTimelineUI = () => {
             </p>
             <Button color="gray" className=" mt-3">
               <a
-                href="https://creativecodermm.com/certificates/azrbh544Zin/28"
+                href="https://creativecodermm.com/@azrbh544Zin"
                 target="_blank"
               >
                 View Certificate

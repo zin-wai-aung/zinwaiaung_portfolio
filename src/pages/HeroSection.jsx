@@ -72,7 +72,7 @@ const HeroSection = () => {
           {/* image side */}
           <div className="lg:w-2/5 order-1 lg:order-2">
             <Image
-              src={"/svg/girl.svg"}
+              src="https://res.cloudinary.com/da7vqcwkp/image/upload/girl_gdonwi.svg"
               alt="cartoon girl"
               width={450}
               height={300}

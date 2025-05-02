@@ -48,9 +48,9 @@ const ProjectDetailPage = ({ params }) => {
 
           {/* links seciton */}
           <div className=" mt-3 lg:mt-20 w-full mx-auto">
-            <ul className="flex flex-col lg:flex-row justify-between space-y-5 lg:space-y-0">
+            <h2 className=" mb-2 text-nowrap">Technologies used:</h2>
+            <ul className="flex flex-col lg:flex-row justify-between items-start space-y-5 lg:space-y-0">
               <li className=" w-full lg:w-[70%] flex md:flex-col gap-x-3">
-                <h2 className=" mb-2 text-nowrap">Technologies used:</h2>
                 <ul className="flex flex-wrap gap-2 mb-6">
                   {tools.map((tool, index) => (
                     <li
@@ -63,37 +63,41 @@ const ProjectDetailPage = ({ params }) => {
                 </ul>
               </li>
 
-              <li className=" w-full lg:w-[30%] flex items-center justify-between">
-                <div className="flex items-center gap-x-2 bg-Darksecondary-muted/10 rounded-xl hover:bg-Darksecondary/20 px-3 py-2">
-                  {codeLink && (
+              <li className=" w-full lg:w-[30%] flex items-center justify-end gap-x-5">
+                {codeLink && (
+                  <div
+                    className={`flex items-center gap-x-2
+                    bg-primary/90 rounded-xl hover:bg-primary px-3 py-2`}
+                  >
                     <a
                       href={codeLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className=" flex items-center gap-x-2  text-Darksecondary-muted"
+                      className=" flex items-center gap-x-2  text-black"
                     >
                       <FaGithub className=" text-xl" />
                       <span className=" text-nowrap text-[1rem]">
                         Source Code
                       </span>
                     </a>
-                  )}
-                </div>
-                <div className="flex items-center gap-x-2 bg-Darksecondary-muted/10 rounded-xl hover:bg-Darksecondary/20 px-3 py-2">
-                  {demoLink && (
+                  </div>
+                )}
+
+                {demoLink && (
+                  <div className="flex items-center gap-x-2 bg-primary/90 rounded-xl hover:bg-primary px-3 py-2">
                     <a
                       href={demoLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className=" flex items-center gap-x-2  text-Darksecondary-muted"
+                      className=" flex items-center gap-x-2  text-black"
                     >
                       <FaLocationArrow className=" text-lg p" />
                       <span className=" text-nowrap text-[1rem]">
                         View Demo
                       </span>
                     </a>
-                  )}
-                </div>
+                  </div>
+                )}
               </li>
             </ul>
           </div>
@@ -108,7 +112,13 @@ const ProjectDetailPage = ({ params }) => {
             height={400}
             className="mb-6"
           />
-          <p className="mb-32 lg:w-2/3">{description}</p>
+          <p className="mb-8 lg:w-2/3 font-bold">{description}</p>
+          {
+            currentProject.detailDescription &&
+            <p className="mb-32 lg:w-2/3 whitespace-pre-line">
+              {currentProject.detailDescription}
+            </p>
+          }
 
           {detailImages &&
             detailImages.map((detImage, index) => (
