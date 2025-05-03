@@ -4,7 +4,7 @@ const portfolioProjects = [
     projects: [
       {
         id: 1,
-        title: "Cre8tionNet - Digital Asset Platform",
+        title: "Cre8tionNet | Digital Asset Platform",
         description:
           "Cre8tionNet is a passion project built using the MERN stack with Tailwind CSS for styling and Zustand for state management. I created this platform to help digital creators access free design resources and eventually allow contributors to upload and monetize their work.",
         detailDescription: `The frontend is powered by React and styled with Tailwind CSS for a sleek and responsive interface. I used Zustand for global state handling , Framer Motion and engaging UI feedback. Asset data and user interactions are fetched efficiently using SWR and Axios.
@@ -44,7 +44,8 @@ For backend operations, I set up Node.js with Express and MongoDB to store and r
         description:
           "A modern and feature-rich website showcasing services, projects, and professional expertise. Designed with a focus on aesthetics, functionality, and smooth user experience, the website highlights web development and graphic design services.",
         tools: ["React", "Tailwind", "Zustand", "EmailJS", "Framer Motion"],
-        image: "/images/projects/web/ITCreation.jpg",
+        image:
+          "https://res.cloudinary.com/da7vqcwkp/image/upload/ITCreation_ww08x1.jpg",
         detailImages: [
           "https://res.cloudinary.com/da7vqcwkp/image/upload/ITCreation1_hpdm2e.jpg",
           "https://res.cloudinary.com/da7vqcwkp/image/upload/ITCreation2_cesgce.jpg",
@@ -94,7 +95,8 @@ I integrated a Laravel-based backend (not self-hosted) to fetch and store invoic
         description:
           "The Invoice App is a secure and feature-rich web application designed to streamline product sales and invoice management. To ensure data security and personalized access, the app includes user authorization functionality. Users must register and log in to access the application's core features. Without an account, users cannot create products or vouchers, ensuring that only authorized users can manage and manipulate data. This robust authorization system provides a secure environment for managing business operations and demonstrates advanced full-stack development skills.",
         tools: ["React", "Tailwind", "Zustand", "Authorization"],
-        image: "/images/projects/web/ContactNumber.png",
+        image:
+          "https://res.cloudinary.com/da7vqcwkp/image/upload/Screen_Shot_2025-05-03_at_1.26.06_PM_osunx0.png",
         codeLink: "https://github.com/zin-wai-aung/React-Contact-App-Project",
         demoLink:
           "https://www.linkedin.com/posts/zin-wai-aung_react-reactjs-javascript-activity-7187081784533102592-RKxg?utm_source=share&utm_medium=member_desktop&rcm=ACoAADraq34B62hW_s5xGzlP-ii9FDBOwWFInlI",
@@ -199,7 +201,7 @@ I integrated a Laravel-based backend (not self-hosted) to fetch and store invoic
       },
       {
         id: 5,
-        title: "In The Nude - Skincare Logo",
+        title: "In The Nude Skincare Logo",
         description:
           "Designed a series of modern, minimalistic logos for various brands and startups.",
         tools: null,
@@ -212,7 +214,7 @@ I integrated a Laravel-based backend (not self-hosted) to fetch and store invoic
       },
       {
         id: 6,
-        title: "Nay Chi - Branded Collection",
+        title: "Nay Chi Branded Collection",
         description:
           "Designed a series of modern, minimalistic logos for various brands and startups.",
         tools: null,
@@ -264,7 +266,7 @@ I integrated a Laravel-based backend (not self-hosted) to fetch and store invoic
       },
       {
         id: 10,
-        title: "Kan Htoo - Potato Chips Logo",
+        title: "Kan Htoo Potato Chips Logo",
         description:
           "Designed a series of modern, minimalistic logos for various brands and startups.",
         tools: null,
@@ -295,7 +297,7 @@ I integrated a Laravel-based backend (not self-hosted) to fetch and store invoic
     projects: [
       {
         id: 1,
-        title: "Asia - Traditional Medicine Packaging Design",
+        title: "Asia Traditional Medicine Packaging Design",
         description:
           "Created eye-catching posters and flyers for events and marketing campaigns.",
         tools: null,
@@ -308,7 +310,7 @@ I integrated a Laravel-based backend (not self-hosted) to fetch and store invoic
       },
       {
         id: 2,
-        title: "AD - Rice Packaging Bag Design",
+        title: "AD Rice Packaging Bag Design",
         description:
           "A modern and eye-catching rice bag packaging design, designed to enhance shelf appeal and brand recognition with bold typography and natural color tones. Perfect for premium rice brands seeking a fresh, trustworthy look.",
         tools: null,
@@ -321,7 +323,7 @@ I integrated a Laravel-based backend (not self-hosted) to fetch and store invoic
       },
       {
         id: 3,
-        title: "Mobile Shop  Social Media Design",
+        title: "Mobile Shop Social Media Design",
         description:
           "Created eye-catching posters and flyers for events and marketing campaigns.",
         tools: null,
@@ -334,7 +336,7 @@ I integrated a Laravel-based backend (not self-hosted) to fetch and store invoic
       },
       {
         id: 4,
-        title: "Rainbow - Pamphlet Bi-Folded Design",
+        title: "Rainbow Pamphlet Bi-Folded Design",
         description:
           "Created eye-catching posters and flyers for events and marketing campaigns.",
         tools: null,
@@ -346,7 +348,7 @@ I integrated a Laravel-based backend (not self-hosted) to fetch and store invoic
       },
       {
         id: 5,
-        title: "Strong Build - Social Media Design",
+        title: "Strong Build Social Media Design",
         description:
           "Created eye-catching posters and flyers for events and marketing campaigns.",
         tools: null,

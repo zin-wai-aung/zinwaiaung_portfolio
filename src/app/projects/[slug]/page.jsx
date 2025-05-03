@@ -61,6 +61,12 @@ const ProjectDetailPage = ({ params }) => {
     demoLink,
   } = currentProject;
 
+  if (!currentProject) {
+    console.error(`Project not found for slug: ${slug}`);
+    // ...show fallback UI
+  }
+
+
   return (
     <section id="projects" className="pt-28">
       {/* 🟡 Detail Header Section */}
@@ -80,16 +86,18 @@ const ProjectDetailPage = ({ params }) => {
             <h2 className="mb-2 text-nowrap">Technologies used:</h2>
             <ul className="flex flex-col lg:flex-row justify-between items-start space-y-5 lg:space-y-0">
               <li className="w-full lg:w-[70%] flex md:flex-col gap-x-3">
-                <ul className="flex flex-wrap gap-2 mb-6">
-                  {tools.map((tool, index) => (
-                    <li
-                      key={index}
-                      className="px-2 md:px-3 py-1 text-sm md:text-[1rem] bg-Lightsecondary/20 dark:bg-Darksecondary/20 dark:text-Darksecondary rounded-full"
-                    >
-                      {tool}
-                    </li>
-                  ))}
-                </ul>
+                {Array.isArray(tools) && (
+                  <ul className="flex flex-wrap gap-2 mb-6">
+                    {tools.map((tool, index) => (
+                      <li
+                        key={index}
+                        className="px-2 md:px-3 py-1 text-sm md:text-[1rem] bg-Lightsecondary/20 dark:bg-Darksecondary/20 dark:text-Darksecondary rounded-full"
+                      >
+                        {tool}
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </li>
 
               <li className="w-full lg:w-[30%] flex items-center justify-end gap-x-5">
@@ -136,6 +144,7 @@ const ProjectDetailPage = ({ params }) => {
             alt={title}
             width={800}
             height={400}
+            sizes="(max-width: 768px) 100vw, 800px"
             className="mb-6"
           />
           <p className="mb-8 lg:w-2/3 font-bold">{description}</p>
