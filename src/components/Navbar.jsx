@@ -100,9 +100,14 @@ export default function Navbar() {
                 visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
               }}
             >
-              <button className="border-[1.5px] border-primary text-primary px-3 py-2 rounded-md hover:bg-primary/10">
+              <a
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-[1.5px] border-primary text-primary px-3 py-2 rounded-md hover:bg-primary/10"
+              >
                 Resume
-              </button>
+              </a>
             </motion.li>
             {/* Dark Mode Toggle */}
             <motion.li

@@ -76,7 +76,7 @@ const WorkTimelineUI = () => {
                 </Timeline.Title>
               </div>
               <p className=" text-2xl hover:text-Lightsecondary group-hover:-translate-y-1 group-hover:translate-x-1 transition-all">
-                <a>
+                <a href="https://cre8tionnet.up.railway.app/" target="_blank">
                   <TbArrowUpRight />
                 </a>
               </p>

@@ -7,11 +7,10 @@ const WebDevelopment = () => {
   const webInfo = {
     title: "Web Development",
     details: [
-      `Experienced in building dynamic and user-friendly websites using
-      modern technologies like React, Next.js and Tailwind.`,
-      ` Proficient in frontend development, leveraging libraries like Shadcn UI, Lottie, Framer Motion, Zustand, React-Redux, and
-        React Hook Form.`,
-      ` Skilled in cloud services integration and deployment (e.g, Cloudinary, GitHub) for optimized performance.`,
+      `Experienced frontend developer skilled in crafting responsive, user-focused web applications using React, Next.js, Typescript and Tailwind CSS.`,
+      `Proficient in the MERN stack, REST APIs, and UI libraries like Shadcn UI, Framer Motion, and React Hook Form.`,
+      `Strong expertise in state management with Zustand and Redux, plus integration of Cloudinary and modern deployment tools.`,
+      `Dedicated to building scalable solutions with clean code, smooth UX, and efficient performance.`,
     ],
     logoIcons: [
       {

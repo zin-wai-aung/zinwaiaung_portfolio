@@ -4,7 +4,7 @@ const portfolioProjects = [
     projects: [
       {
         id: 1,
-        title: "Cre8tionNet | Digital Asset Platform",
+        title: "Cre8tionNet Digital Asset Platform",
         description:
           "Cre8tionNet is a passion project built using the MERN stack with Tailwind CSS for styling and Zustand for state management. I created this platform to help digital creators access free design resources and eventually allow contributors to upload and monetize their work.",
         detailDescription: `The frontend is powered by React and styled with Tailwind CSS for a sleek and responsive interface. I used Zustand for global state handling , Framer Motion and engaging UI feedback. Asset data and user interactions are fetched efficiently using SWR and Axios.

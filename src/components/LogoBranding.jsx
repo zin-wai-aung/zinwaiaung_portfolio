@@ -12,25 +12,7 @@ const LogoBranding = () => {
       `Expertise in creating unique and memorable logo designs tailored to a brand’s identity and values.`,
       `Proficiency in developing logo guidelines, mockups, and presentation concepts for a cohesive brand identity.`,
       `Strong understanding of visual storytelling, using Adobe Illustrator and Photoshop to bring creative concepts to life.`,
-    ],
-    logoIcons: [
-      {
-        title: "Illustrator",
-        iconUrl: `/svg/icons/logo-graphic/illustrator.svg`,
-      },
-      {
-        title: "Photoshop",
-        iconUrl: `/svg/icons/logo-graphic/photoshop.svg`,
-      },
-      {
-        title: "Mila",
-        iconUrl: `/svg/icons/logo-graphic/milanote.png`,
-      },
-      {
-        title: "Behance",
-        iconUrl: `/svg/icons/logo-graphic/behance.svg`,
-      },
-    ],
+    ]
   };
 
   const { ref, inView } = useInView({
@@ -66,21 +48,6 @@ const LogoBranding = () => {
             <ListUI key={index} listDetail={detail} />
           ))}
         </ul>
-        <div className=" flex flex-row items-center flex-wrap gap-3 lg:gap-5 mt-5">
-          {brandingInfo.logoIcons.map((item) => (
-            <div
-              key={item.title}
-              className=" w-14 h-14 rounded-lg bg-Darksecondary/30 p-2 flex justify-center items-center"
-            >
-              <Image
-                src={item.iconUrl}
-                alt={item.title}
-                width={70}
-                height={70}
-              />
-            </div>
-          ))}
-        </div>
       </div>
     </motion.section>
   );
