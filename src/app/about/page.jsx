@@ -30,18 +30,25 @@ const AboutPage = () => {
           <div className="w-full lg:w-2/3 order-2 lg:order-1 mt-10 lg:mt-0">
             <div className="space-y-4 order-2 lg:order-1 dark:text-Darksecondary-paragraph text-[1.1rem]">
               <p>
-                Hi, I'm Zin Wai Aung, a passionate{" "}
-                <strong className=" dark:text-Darksecondary">
+                Hi, I'm Zin Wai Aung — a dedicated{" "}
+                <strong className="dark:text-Darksecondary">
                   Web Developer
                 </strong>{" "}
-                and freelance{" "}
-                <strong className=" dark:text-Darksecondary">
+                and experienced{" "}
+                <strong className="dark:text-Darksecondary">
                   Logo Designer
-                </strong>
-                .
-                <br />I combine creative design with technical expertise to
-                deliver stunning, user-friendly websites and memorable brand
-                identities.
+                </strong>{" "}
+                with a strong focus on creating intuitive and modern digital
+                experiences.
+              </p>
+              <p>
+                I'm currently focused on building scalable and dynamic web
+                applications using the{" "}
+                <strong className="dark:text-Darksecondary">MERN stack</strong>{" "}
+                (MongoDB, Express, React, Node.js). With deep expertise in{" "}
+                <strong className="dark:text-Darksecondary">React</strong> and
+                modern frontend development, I strive to craft responsive,
+                maintainable UIs that elevate user engagement.
               </p>
               <p>
                 In 2021, I founded{" "}
@@ -51,40 +58,45 @@ const AboutPage = () => {
                   className="dark:text-green-400 font-semibold underline"
                 >
                   IT Creation
-                </a>{" "}
-                to deliver innovative design solutions, completing{" "}
-                <strong className=" dark:text-Darksecondary">
-                  300+ logo projects
+                </a>
+                , delivering innovative brand identity solutions. With over{" "}
+                <strong className="dark:text-Darksecondary">
+                  300 logo design projects
                 </strong>{" "}
-                and specializing in brand identity with over 3 years of graphic
-                design experience.
+                completed and 4 years of experience in graphic design, I’ve
+                helped many businesses build a strong visual presence.
               </p>
-
               <p>
-                Since 2023, I've shifted my focus to web development, honing my
-                skills in creating high-quality websites, while still offering
-                logo and graphic design services.
+                Since 2023, I’ve transitioned my primary focus to{" "}
+                <strong className="dark:text-Darksecondary">
+                  web development
+                </strong>
+                , continuing to offer design services while sharpening my
+                full-stack skills. I enjoy turning ideas into products that are
+                both beautiful and functional.
               </p>
-
               <p>
-                I'm open to collaboration and enjoy connecting with developers
-                to share ideas and create together..
+                I'm always open to collaboration, whether it’s with developers,
+                designers, or entrepreneurs. Let’s create something impactful
+                together.
               </p>
             </div>
-            <p className=" dark:text-Darksecondary-paragraph mt-3 mb-1">
+
+            <p className="dark:text-Darksecondary-paragraph mt-3 mb-1">
               Here are a few of the other activities that I love to do:
             </p>
             <div className="dark:text-Darksecondary flex items-center gap-x-20">
-              <ul className=" space-y-2">
-                <li className="">👩‍💻 Coding</li>
-                <li className="">💡 Problem Solving</li>
+              <ul className="space-y-2">
+                <li>👨‍💻 Coding </li>
+                <li>🧠 Problem Solving</li>
               </ul>
-              <ul className=" space-y-2">
-                <li className="">💻 Studying</li>
-                <li className="">📖 Reading</li>
+              <ul className="space-y-2">
+                <li>📚 Exploring New</li>
+                <li>📖 Reading & Personal Growth</li>
               </ul>
             </div>
           </div>
+
           <div className=" w-full lg:w-1/3 flex justify-center order-1 lg:order-2 mt-10 md:mt-0">
             <Image
               src="https://res.cloudinary.com/da7vqcwkp/image/upload/profile_pmxxyt.png"
