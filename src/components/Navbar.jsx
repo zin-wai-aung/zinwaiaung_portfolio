@@ -159,9 +159,14 @@ export default function Navbar() {
             ))}
             {/* Resume Button */}
             <li className="my-5 flex justify-between items-center w-full">
-              <button className="border-[1.5px] border-Lightsecondary dark:border-primary text-Lightsecondary dark:text-primary px-3 py-2 rounded-md">
+              <a
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-[1.5px] border-Lightsecondary dark:border-primary text-Lightsecondary dark:text-primary px-3 py-2 rounded-md"
+              >
                 Resume
-              </button>
+              </a>
               {/* Dark Mode Toggle */}
               <button>
                 {theme === "dark" ? (
