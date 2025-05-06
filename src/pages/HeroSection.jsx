@@ -43,7 +43,7 @@ const HeroSection = () => {
               {" "}
               <span className="animate-pulse text-2xl">✌🏻</span> Hello , I'm
             </p>
-            <h1 className=" text-[3rem] md:text-7xl text-nowrap dark:text-Darksecondary font-bold leading-tight uppercase tracking-wider">
+            <h1 className=" text-[2rem] sm:text-[3rem] md:text-7xl text-nowrap dark:text-Darksecondary font-bold leading-tight uppercase tracking-wider">
               ZinWai &nbsp;Aung
             </h1>
             <div className=" text-[1rem] md:text-3xl font-grotesk font-bold tracking-widest uppercase">

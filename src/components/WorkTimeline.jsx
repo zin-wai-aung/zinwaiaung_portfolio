@@ -13,7 +13,7 @@ const WorkTimelineUI = () => {
         Work Experience
       </h1>
       <Timeline>
-        <Timeline.Item className=" bg-Darksecondary-muted/10  group p-5 rounded-xl">
+        <Timeline.Item className=" bg-Darksecondary-muted/10  group p-3 md:p-5 rounded-xl">
           <Timeline.Point icon={HiCalendar} />
           <Timeline.Content>
             <div className=" flex items-start justify-between">
@@ -35,7 +35,7 @@ const WorkTimelineUI = () => {
               </p>
             </div>
             <Timeline.Body className="dark:text-Darksecondary-muted">
-              <ul className=" mt-3 space-y-3">
+              <ul className=" mt-3 space-y-3 text-sm md:text-[1rem]">
                 <ListUI
                   isTimeline={true}
                   listDetail={
@@ -59,7 +59,7 @@ const WorkTimelineUI = () => {
           </Timeline.Content>
         </Timeline.Item>
 
-        <Timeline.Item className=" bg-Darksecondary-muted/10 group p-5 rounded-xl">
+        <Timeline.Item className=" bg-Darksecondary-muted/10 group p-3 md:p-5 rounded-xl">
           <Timeline.Point icon={HiCalendar} />
           <Timeline.Content>
             <div className=" flex items-start justify-between">
@@ -82,7 +82,7 @@ const WorkTimelineUI = () => {
               </p>
             </div>
             <Timeline.Body className="dark:text-Darksecondary-muted">
-              <ul className=" mt-3 space-y-3">
+              <ul className=" mt-3 space-y-3 text-sm md:text-[1rem]">
                 <ListUI
                   isTimeline={true}
                   listDetail={

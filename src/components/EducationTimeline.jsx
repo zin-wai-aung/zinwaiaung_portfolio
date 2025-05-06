@@ -14,7 +14,7 @@ const EducationTimelineUI = () => {
 
       <Timeline>
         {/* SWD */}
-        <Timeline.Item className=" bg-Darksecondary-muted/10 p-5 rounded-xl">
+        <Timeline.Item className=" bg-Darksecondary-muted/10 p-3 md:p-5 rounded-xl">
           <Timeline.Point icon={FaAward} />
           <Timeline.Content>
             <div className=" flex items-center gap-x-5">
@@ -26,13 +26,13 @@ const EducationTimelineUI = () => {
                 className=" rounded-lg"
               />
               <div>
-                <Timeline.Title className="dark:text-Darksecondary text-lg md:text-xl">
+                <Timeline.Title className="dark:text-Darksecondary text-[1rem] md:text-xl">
                   Special Web Design (SWD)
                 </Timeline.Title>
-                <p className="dark:text-Darksecondary-muted text-[.9rem] md:text-lg">
+                <p className="dark:text-Darksecondary-muted text-[.85rem] md:text-lg">
                   Issue on : 2020
                 </p>
-                <p className=" text-[1rem] md:text-[1.15rem]">
+                <p className=" text-[.85rem] md:text-[1.15rem]">
                   Issue by :{" "}
                   <a
                     href="https://mms-it.com/"
@@ -64,7 +64,7 @@ const EducationTimelineUI = () => {
         </Timeline.Item>
 
         {/* Vue */}
-        <Timeline.Item className=" bg-Darksecondary-muted/10 p-5 rounded-xl">
+        <Timeline.Item className=" bg-Darksecondary-muted/10 p-3 md:p-5 rounded-xl">
           <Timeline.Point icon={FaAward} />
           <Timeline.Content>
             <div className=" flex items-center gap-x-5">
@@ -76,13 +76,13 @@ const EducationTimelineUI = () => {
                 className=" rounded-lg"
               />
               <div>
-                <Timeline.Title className="dark:text-Darksecondary text-lg md:text-xl">
+                <Timeline.Title className="dark:text-Darksecondary text-[1rem] md:text-xl">
                   Vue.js Certification
                 </Timeline.Title>
-                <p className="dark:text-Darksecondary-muted text-[.9rem] md:text-lg">
-                  Issue on : June 1, 2023
+                <p className="dark:text-Darksecondary-muted text-[.85rem] md:text-lg">
+                  Issue on : March, 2023
                 </p>
-                <p className=" text-[1rem] md:text-[1.15rem] text-nowrap">
+                <p className=" text-[.85rem] md:text-[1.15rem]">
                   Issue by :{" "}
                   <a
                     href="https://creativecodermm.com/"
@@ -90,7 +90,7 @@ const EducationTimelineUI = () => {
                     className=" font-grotesk font-bold underline"
                   >
                     Creative Coder
-                  </a>{" "}
+                  </a>
                 </p>
               </div>
             </div>
@@ -111,7 +111,7 @@ const EducationTimelineUI = () => {
         </Timeline.Item>
 
         {/* logo */}
-        <Timeline.Item className=" bg-Darksecondary-muted/10 p-5 rounded-xl">
+        <Timeline.Item className=" bg-Darksecondary-muted/10 p-3 md:p-5 rounded-xl">
           <Timeline.Point icon={FaAward} />
           <Timeline.Content>
             <div className=" flex items-center gap-x-5">
@@ -123,13 +123,13 @@ const EducationTimelineUI = () => {
                 className=" rounded-lg"
               />
               <div>
-                <Timeline.Title className="dark:text-Darksecondary text-lg md:text-xl">
+                <Timeline.Title className="dark:text-Darksecondary text-[1rem] md:text-xl">
                   Logo Design Certification
                 </Timeline.Title>
-                <p className="dark:text-Darksecondary-muted text-[.9rem] md:text-lg">
+                <p className="dark:text-Darksecondary-muted text-[.85rem] md:text-lg">
                   Issue on : June 1, 2023
                 </p>
-                <p className="text-[1rem] md:text-[1.15rem]">
+                <p className="text-[.85rem] md:text-[1.15rem]">
                   Issue by :{" "}
                   <a
                     href="https://www.udemy.com/course/advancedlogodesign"

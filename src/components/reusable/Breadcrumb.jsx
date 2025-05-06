@@ -5,7 +5,7 @@ const BreadCrumbTab = ({ routeLink, frontTab, backTab }) => {
   return (
     <div>
       <nav aria-label="breadcrumb" className="w-max">
-        <ol className="flex space-x-2 md:space-x-5 flex-wrap items-center text-[.9rem] md:text-lg w-full py-2 rounded-md">
+        <ol className="flex space-x-2 md:space-x-5 flex-wrap items-center text-[.85rem] md:text-lg w-full py-2 rounded-md">
           <li className="transition-colors duration-300 cursor-pointer dark:text-Darksecondary-muted dark:hover:text-Darksecondary-paragraph">
             <Link href="/">
               <div className="opacity-60">

@@ -72,7 +72,7 @@ const GraphicDesign = () => {
           {graphicInfo.logoIcons.map((item) => (
             <div
               key={item.title}
-              className=" w-14 h-14 rounded-lg bg-Darksecondary/30 p-2 flex justify-center items-center"
+              className=" w-12 h-12 md:w-14 md:h-14 rounded-lg bg-Darksecondary/30 p-2 flex justify-center items-center"
             >
               <Image
                 src={item.iconUrl}

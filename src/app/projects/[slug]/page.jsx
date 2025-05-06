@@ -100,7 +100,7 @@ const ProjectDetailPage = ({ params }) => {
                 )}
               </li>
 
-              <li className="w-full lg:w-[30%] flex items-center justify-end gap-x-5">
+              <li className="w-full lg:w-[30%] flex items-center justify-center md:justify-end gap-x-1 md:gap-x-4">
                 {codeLink && (
                   <div className="flex items-center gap-x-2 bg-primary/90 rounded-xl hover:bg-primary px-3 py-2">
                     <a

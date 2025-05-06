@@ -5,7 +5,6 @@ import Container from "@/components/Container";
 import PageTitle from "@/components/reusable/PageTitle";
 import { SocialIcons } from "@/components/reusable/SocialIcons";
 import React from "react";
-import { FaEnvelope } from "react-icons/fa";
 
 const ContactPage = () => {
 
@@ -35,7 +34,7 @@ const ContactPage = () => {
             message. <br /> I'd love to hear from you!
           </p>
 
-          <button className=" my-10">
+          <button className=" mt-10">
             <a
               href="mailto:zinwaiaung156@gmail.com"
               className="border-[1.5px] border-primary text-primary px-3 py-2 rounded-md hover:bg-primary/10"
@@ -44,12 +43,10 @@ const ContactPage = () => {
             </a>
           </button>
 
-          <div className=" flex justify-center items-center gap-x-2">
-            <FaEnvelope className=" text-xl" />
-
+          <div className=" mt-5 flex justify-center items-center gap-x-2 text-xl">
             <a
               href="mailto:zinwaiaung156@gmail.com"
-              className=" hover:underline text-xl"
+              className=" hover:underline"
             >
               zinwaiaung156@gmail.com
             </a>

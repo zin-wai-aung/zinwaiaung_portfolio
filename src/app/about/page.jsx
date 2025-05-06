@@ -28,7 +28,7 @@ const AboutPage = () => {
         <PageTitle smallTitle={"about"} mainTitle={"Who I am?"} />
         <main className="flex flex-col lg:flex-row justify-between items-start gap-x-10 mt-5">
           <div className="w-full lg:w-2/3 order-2 lg:order-1 mt-10 lg:mt-0">
-            <div className="space-y-4 order-2 lg:order-1 dark:text-Darksecondary-paragraph text-[1.1rem]">
+            <div className="space-y-4 order-2 lg:order-1 dark:text-Darksecondary-paragraph text-[1rem] md:text-[1.1rem]">
               <p>
                 Hi, I'm Zin Wai Aung — a passionate{" "}
                 <strong className="dark:text-Darksecondary">
@@ -101,7 +101,7 @@ const AboutPage = () => {
             <p className="dark:text-Darksecondary-paragraph mt-3 mb-1">
               Here are a few of the other activities that I love to do:
             </p>
-            <div className="dark:text-Darksecondary flex items-center gap-x-20">
+            <div className="dark:text-Darksecondary flex items-center gap-x-10 md:gap-x-20">
               <ul className="space-y-2">
                 <li>👨‍💻 Coding</li>
                 <li>🧠 Problem Solving</li>

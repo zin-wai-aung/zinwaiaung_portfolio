@@ -3,7 +3,7 @@ import socialIcons from "../../_data/socialIcons";
 
 const FixedSocialIcons = () => {
   return (
-    <div className="fixed top-1/2 md:top-1/3 left-4 md:left-8 flex flex-col items-center space-y-5 z-50">
+    <div className="fixed top-1/4 md:top-1/3 left-2 md:left-8 flex flex-col items-center space-y-5 z-50">
       {socialIcons.map((socialLink, index) => (
         <a
           key={index}

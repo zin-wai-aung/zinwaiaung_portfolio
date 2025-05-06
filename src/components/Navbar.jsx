@@ -59,7 +59,7 @@ export default function Navbar() {
       }`}
     >
       <nav>
-        <div className="flex justify-between items-center py-4 px-20">
+        <div className="flex justify-between items-center py-4 px-8 md:px-20">
           {/* Logo */}
           <Link href="/" className="text-xl font-bold">
             <motion.div

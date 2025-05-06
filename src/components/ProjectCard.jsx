@@ -71,20 +71,20 @@ const ProjectCard = ({
         {/* title */}
         {isDetail ? (
           <Link href={`/projects/${slug}`}>
-            <h2 className="text-2xl font-semibold font-grotesk dark:text-Darksecondary group-hover:underline">
+            <h2 className=" text-xl md:text-2xl leading-5 md:leading-7 font-semibold font-grotesk dark:text-Darksecondary group-hover:underline">
               {title}
             </h2>
           </Link>
         ) : (
           <Link href={demoLink} target="_blank">
-            <h2 className="text-2xl font-semibold font-grotesk dark:text-Darksecondary group-hover:underline">
+            <h2 className=" text-xl md:text-2xl leading-5 md:leading-7 font-semibold font-grotesk dark:text-Darksecondary group-hover:underline">
               {title}
             </h2>
           </Link>
         )}
 
         {/* technology */}
-          <div className=" absolute top-[24rem] flex flex-wrap gap-1">
+          <div className=" absolute top-[23rem] md:top-[24rem] flex flex-wrap gap-1">
             {tools?.map((tool, index) => (
               <span
                 key={index}
